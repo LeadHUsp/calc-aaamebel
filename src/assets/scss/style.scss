@@ -1,15 +1,15 @@
-@import "utils/mixins";
-@import "utils/vars";
+@import 'utils/mixins';
+@import 'utils/vars';
 
 @include make_container($breakpoints);
 
-@import "blocks/header";
+@import 'blocks/header';
 
-@import "blocks/footer";
+@import 'blocks/footer';
 
 body {
   background: rgb(233, 233, 233);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .calc-order {
   width: 70%;
@@ -35,13 +35,15 @@ body {
   text-align: center;
 }
 .preview-product {
-  /*  position: absolute;
-  left: 0;
-  top: 50%; */
   width: 35%;
   padding: 25px 0;
   background: #063854;
-  /* transform: translate(0, -50%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-30px);
+  box-shadow: 10px 11px 6px -3px rgba(44, 69, 88, 0.28);
 }
 .preview-product__img {
   display: flex;
@@ -72,33 +74,62 @@ body {
   width: 100%;
 }
 .calc-form__group {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   padding-top: 15px;
 }
-.calc-form__connect {
-  padding-top: 25px;
-  width: 100%;
-  display: flex;
-}
-.calc-form__group-50w {
+//radio input group
+.connect-group {
+  padding-top: 15px;
   width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
+.connect-group__radio {
+  display: none;
+  &:checked + .connect-group__label {
+    color: #88bd23;
+  }
+}
+.connect-group__title {
+  font-size: 17px;
+  font-weight: 600;
+  padding-bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: #063854;
+}
+.connect-group__label {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 55px;
+  }
+}
+//
+/* .calc-form__group-50w {
+  width: 50%;
+} */
 .calc-form__lable {
   padding-bottom: 15px;
+}
+.calc-form__lable-100w {
+  width: 100%;
 }
 .calc-form__item {
   width: 100%;
   margin-top: 0;
   display: inline-flex;
-  /*   flex-direction: column; */
   align-items: flex-end;
   vertical-align: top;
   padding-bottom: 20px;
-  img {
-    width: 50%;
-  }
+}
+.calc-form__img {
+  width: 50%;
 }
 .calc-form__file-input {
   position: absolute;
@@ -120,11 +151,10 @@ body {
   position: relative;
   text-align: left;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   &:before {
     top: 50%;
-    content: "";
+    content: '';
     background-size: cover;
     background-position: center;
     background-image: url(../images/dots.png);
@@ -134,21 +164,18 @@ body {
     right: 25px;
     transform: translateY(-50%);
   }
+  &:hover {
+    background: #88bd23;
+    color: #fff;
+  }
 }
 .calc-form__btn {
   cursor: pointer;
   width: 270px;
   height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   background: #88bd23;
   color: #fff;
@@ -158,6 +185,18 @@ body {
   white-space: nowrap;
   border: none;
   outline: none;
+  &:hover {
+    background-image: linear-gradient(
+      -80deg,
+      #88bd23 0%,
+      #78aa1b 51%,
+      #689612 100%,
+      #ffcc35 100%,
+      #ffa70e 100%,
+      #ff730e 100%,
+      #addb20 100%
+    );
+  }
 }
 //calc form input
 .calc-form__input {
@@ -181,4 +220,51 @@ body {
 }
 .calc-form__privacy {
   padding-top: 30px;
+}
+@media (max-width: 1280px) {
+  .calc-order__wrapper {
+    flex-wrap: wrap;
+  }
+  .preview-product {
+    width: 100%;
+    transform: translate(-10px, -25px);
+  }
+  .calc-order__form {
+    width: 100%;
+  }
+  .calc-form__group {
+    padding-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .calc-order {
+    width: 100%;
+  }
+  .calc-form__group {
+    width: 100%;
+  }
+  .calc-form__input {
+    height: 35px;
+  }
+  .calc-form__item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .calc-form__img {
+    width: 100%;
+  }
+  .calc-form__file {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+  .connect-group {
+    width: 100%;
+  }
+  .calc-form__btn {
+    margin: 15px auto 0;
+  }
+  .calc-form__privacy {
+    padding-top: 15px;
+    font-size: 12px;
+  }
 }
