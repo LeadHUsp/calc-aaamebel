@@ -1,0 +1,97 @@
+---
+layout: default
+title: default
+---
+
+<div class="calc-order">
+  <div class="calc-order__wrapper">
+    <div class="preview-product">
+      <div class="preview-product__title">Кухня «Ницца»</div>
+      <div class="preview-product__img">
+        <img
+          src="./assets/images/6591dcbf-5c06-4037-87b9-06627f2a43e0.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="calc-order__form">
+      <form class="calc-form">
+        <div class="calc-form__text">Внесите размеры в миллиметрах</div>
+        <div class="calc-form__group calc-form__group-50w">
+          <label class="calc-form__lable" for="input-length">
+            <span>Общая длина: </span></label
+          >
+          <input
+            class="calc-form__input"
+            type="text"
+            name="input-length"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div class="calc-form__group calc-form__group-50w">
+          <label class="calc-form__lable" for="input-height">
+            <span>Высота от пола до потолка: </span></label
+          >
+          <input
+            class="calc-form__input"
+            type="text"
+            name="input-height"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="calc-form__text">Есть готовый проект или эскиз?</div>
+        <div class="calc-form__item">
+          <img src="./assets/images/big-shkaf.jpg" alt="" />
+          <input
+            type="file"
+            id="file"
+            name="files"
+            class="calc-form__file-input"
+          />
+          <label for="file" class="calc-form__file">
+            <span class="calc-form__file_text"
+              >Загрузить фото<br /><span style="font-size: 14px"
+                >(максимум 3 МБ)</span
+              ></span
+            >
+          </label>
+        </div>
+        <div class="calc-form__group calc-form__group-50w">
+          <label class="calc-form__lable" for="input-phone">
+            <span>Номер телефона </span></label
+          >
+          <input
+            class="calc-form__input"
+            type="text"
+            name="input-phone"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="calc-form__group calc-form__group-50w">
+          <label class="calc-form__lable" for="input-phone">
+            <span>Предпочитаемый способ связи </span></label
+          >
+          <input
+            class="calc-form__input"
+            type="text"
+            name="input-phone"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="calc-form__privacy">
+          Нажимая на кнопку, Вы даёте согласие на обработку своих
+          <a class="calc-form__link" href="privacy.html">персональных данных</a
+          >.
+        </div>
+        <div class="calc-form__group">
+          <button class="calc-form__btn">Заказать расчет</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
