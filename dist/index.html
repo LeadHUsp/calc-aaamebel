@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://aaamebel.ru/assets/templates/site/css/style.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="" />
+    
+    <title>default</title>
+  </head>
+  <body>
+    
+    <div class="calc-order">
+      <div class="calc-order__close">&times;</div>
+      <div class="calc-order__wrapper">
+        <div class="preview-product">
+          <div class="preview-product__img">
+            <img
+              src="./assets/images/6591dcbf-5c06-4037-87b9-06627f2a43e0.jpg"
+              alt=""
+            />
+          </div>
+          <div class="preview-product__title">Кухня «Ницца»</div>
+        </div>
+        <div class="calc-order__form">
+          <form class="calc-form">
+            <div class="calc-form__text">Введите размеры в миллиметрах</div>
+            <div class="calc-form__group">
+              <label class="calc-form__lable" for="input-length">
+                Общая длина (мм)
+              </label>
+              <div class="calc-form__elem">
+                <input
+                  class="calc-form__input calc-form__input-length"
+                  type="text"
+                  name="input-length"
+                  autocomplete="off"
+                  required
+                />
+    
+                <span class="calc-form__size">мм</span>
+              </div>
+            </div>
+    
+            <div class="calc-form__group">
+              <label class="calc-form__lable" for="input-height">
+                Высота от пола до потолка (мм)
+              </label>
+              <div class="calc-form__elem">
+                <input
+                  class="calc-form__input"
+                  type="text"
+                  name="input-length"
+                  autocomplete="off"
+                  required
+                />
+    
+                <span class="calc-form__size">мм</span>
+              </div>
+            </div>
+    
+            <div class="calc-form__item">
+              <div class="calc-form__text calc-form__text-file">
+                Есть готовый проект или эскиз?
+              </div>
+              <input
+                type="file"
+                id="file"
+                name="files"
+                class="calc-form__file-input"
+              />
+              <label for="file" class="calc-form__file">
+                <span class="calc-form__file_text">Загрузить фото</span>
+              </label>
+            </div>
+            <div class="calc-form__group calc-form__group-phone">
+              <label class="calc-form__lable" for="input-phone">
+                Ваш номер телефона
+              </label>
+              <input
+                class="calc-form__input calc-form__input-phone"
+                type="text"
+                name="input-phone"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="calc-form__text">Предпочитаемый тип связи</div>
+            <div class="connect-group">
+              <input
+                class="connect-group__radio"
+                type="radio"
+                id="input-call"
+                name="connect-variant"
+                value="звонок"
+              />
+              <label class="connect-group__label" for="input-call">
+                <div class="connect-group__mark"></div>
+                <span class="connect-group__text">Телефон</span>
+              </label>
+              <input
+                class="connect-group__radio"
+                type="radio"
+                id="input-whatsapp"
+                name="connect-variant"
+                value="whatsapp"
+              />
+              <label class="connect-group__label" for="input-whatsapp">
+                <div class="connect-group__mark"></div>
+                <span class="connect-group__text">WhatsApp</span>
+              </label>
+            </div>
+            <div class="calc-form__group calc-form__group-submit">
+              <button class="calc-form__btn" type="submit">Заказать расчет</button>
+              <div class="calc-form__privacy">
+                Нажимая на кнопку, Вы даёте согласие на обработку своих
+                <a class="calc-form__link" href="privacy.html"
+                  >персональных данных</a
+                >.
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/vendors.js"></script>
+  </body>
+</html>
