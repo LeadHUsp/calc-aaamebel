@@ -221,6 +221,22 @@ body {
 .calc-form__privacy {
   padding-top: 30px;
 }
+.calc-order__close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  &:hover {
+    color: #78aa1b;
+  }
+}
 @media (max-width: 1280px) {
   .calc-order__wrapper {
     flex-wrap: wrap;
